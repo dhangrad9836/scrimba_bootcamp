@@ -1,0 +1,45 @@
+/* @font-face {
+    src: url("autumn.ttf");
+    font-family: autumn;
+} */
+
+body {
+  color: #335169;
+  /* background-image: url("images/space.jpg");
+  background-size: cover;   */
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+}
+
+#hero {
+  background-image: url("images/space.jpg");
+  background-size: cover;
+  padding: 10px 0 40px 0;
+}
+
+.btn {
+  /* display: block;
+  margin: auto; */
+  border: none;
+  padding: 8px 15px;
+  background: #f5f3ef;
+  color: #335169;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+}
+
+#title {
+  text-shadow: 0px 0px 4px orange;
+}
+
+/* h2{
+    font-family: autumn;
+} */
+.cta {
+  border-bottom: 5px solid white;
+}
+
+#space_x {
+  width: 20%;
+}
