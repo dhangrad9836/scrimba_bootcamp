@@ -1,0 +1,65 @@
+@font-face {
+  font-family: score_board;
+  src: url(timer_font.ttf);
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: #313d5f;
+  color: #eeeeee;
+  height: 385px;
+  width: 575px;
+  margin: auto;
+}
+
+/* h3{
+    font-size: ;
+} */
+
+.home_score {
+  background: black;
+  height: 120px;
+  width: 155px;
+  font-family: score_board;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+.guest_score {
+  background: black;
+  height: 120px;
+  width: 155px;
+  font-family: score_board;
+  border-radius: 5px;
+  padding-top: 20px;
+}
+
+.score_font {
+  font-size: 100px;
+  margin: 0;
+  color: #f94f6d;
+}
+/* p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+.scorecard {
+  margin-top: 50px;
+}
+
+button {
+  margin-top: 10px;
+  height: 35px;
+  width: 40px;
+  background: #313d5f;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+}
