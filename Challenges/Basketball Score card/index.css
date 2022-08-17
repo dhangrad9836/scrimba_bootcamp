@@ -18,9 +18,11 @@ body {
   margin: auto;
 }
 
-/* h3{
-    font-size: ;
-} */
+h3 {
+  margin: 10px 0 5px;
+  font-size: 30;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .home_score {
   background: black;
@@ -62,4 +64,5 @@ button {
   color: white;
   border: 1px solid white;
   border-radius: 2px;
+  font-family: score_board;
 }

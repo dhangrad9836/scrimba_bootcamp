@@ -7,21 +7,21 @@
       <div class="scorecard">
         <h3>HOME</h3>
         <div class="home_score">
-          <p class="score_font">0</p>
+          <p id="home_point" class="score_font">0</p>
         </div>
-        <button class="home_plus_one">+1</button>
-        <button class="home_plus_two">+2</button>
-        <button class="home_plus_three">+3</button>
+        <button class="home_plus_one" onclick="homePlusOne()">+1</button>
+        <button class="home_plus_two" onclick="homePlusTwo()">+2</button>
+        <button class="home_plus_three" onclick="homePlusThree()">+3</button>
       </div>
 
       <div class="scorecard">
         <h3>GUEST</h3>
         <div class="guest_score">
-          <p class="score_font">0</p>
+          <p id="guest_point" class="score_font">0</p>
         </div>
-        <button class="guest_plus_one">+1</button>
-        <button class="guest_plus_two">+2</button>
-        <button class="guest_plus_three">+3</button>
+        <button class="guest_plus_one" onclick="guestPlusOne()">+1</button>
+        <button class="guest_plus_two" onclick="guestPlusTwo()">+2</button>
+        <button class="guest_plus_three" onclick="guestPlusThree()">+3</button>
       </div>
     </div>
     <script src="index.js"></script>
