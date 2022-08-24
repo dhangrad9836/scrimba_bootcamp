@@ -1,0 +1,92 @@
+@font-face {
+  src: url(karla.bold.ttf);
+  font-family: Karla;
+}
+@font-face {
+  src: url(Inter-Thin-BETA.otf);
+  font-family: Inter;
+}
+
+body {
+  margin: 0;
+  background: #1c1c1c;
+}
+
+#outside {
+  height: 550px;
+  width: 550px;
+  display: inline-block;
+  background: #1f2937;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  /* border: 1px solid red; */
+  height: 80px;
+  width: 354px;
+  margin: 115px 144px 0 52px;
+  font-family: "Karla";
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: left;
+}
+
+span {
+  color: #4adf86;
+}
+
+p#quote {
+  /* border: 1px solid red; */
+  font-family: Inter;
+  margin: 10px 144px 0 52px;
+  height: 28px;
+  width: 372px;
+  text-align: left;
+}
+
+button {
+  margin-top: 51px;
+  margin-left: 52px;
+  font-size: 16px;
+  display: flex;
+  height: 42px;
+  width: 191px;
+  background: #10b981;
+  color: white;
+  padding-top: 12;
+  padding-left: 23px;
+  border: none;
+  border-radius: 3px;
+}
+
+/* hr{
+    margin-top: 35px;
+    width: 446px;
+    border-bottom:  #2F3E53;
+    color: #2F3E53;
+} */
+
+.line {
+  margin-top: 35px;
+  height: 1.5px;
+  background: #2f3e53;
+  width: 446px;
+  display: inline-block;
+}
+
+.output {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+#pwd-1,
+#pwd-2 {
+  /* border: 1px solid red; */
+  height: 35px;
+  width: 200px;
+  background: #2f3e53;
+  border-radius: 5px;
+}
