@@ -10,7 +10,7 @@ const inputBtn = document.getElementById("input-btn");
 
 // 2. Grab the unordered list and store it in a const variable called ulEl
 const ulEl = document.getElementById("ul-el");
-console.log(ulEl);
+//console.log(ulEl);
 //second create event listener with click event and function
 //make sure to get value from inputEl and push it to the myLeads array
 inputBtn.addEventListener("click", function () {
