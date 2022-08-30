@@ -1,52 +1,47 @@
-let myLeads = [];
-const inputEl = document.getElementById("input-el");
-const inputBtn = document.getElementById("input-btn");
-const ulEl = document.getElementById("ul-el");
+let myLeads = []
+const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+const ulEl = document.getElementById("ul-el")
+const deleteBtn = document.getElementById("delete-btn")
+const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+const tabBtn = document.getElementById("tab-btn")
 
-//localStorage.setItem("myLeads", "www.exampleLead.com");
-//console.log(localStorage.getItem("myLeads"));
-
-//localStorge example
-//localStorage.setItem("myExample", "www.example.com");
-// console.log(localStorage.getItem("myExample"));
-// localStorage.clear();
-
-////////////////////////////////////////////////////////////////////////////////
-// Get the leads from the localStorage - PS: JSON.parse()
-// Store it in a variable, leadsFromLocalStorage
-// Log out the variable
-localStorage.clear();
-let storedLeads = JSON.parse(localStorage.getItem("myLeads"));
-//storedLeads = JSON.parse(storedLeads);
-console.log(`These are the leads ${storedLeads}`);
-
-inputBtn.addEventListener("click", function () {
-  //once the click event is triggered this function pushes the string value from intpuEl to the myLeads array..then after the renderLeads() function is called
-  myLeads.push(inputEl.value);
-  //////////////////////////////////////////////////////////////////////////////////
-  // Save the myLeads array to localStorage
-  // PS: remember JSON.stringify()
-  //sol = the localStorage is setting the item of the key myLeads and the array myLeads is being strinigfied with the JSON object
-  localStorage.setItem("myLeads", JSON.stringify(myLeads));
-
-  //rember how functions work...after the function is executed the code will return back to this line and see if there is any other execution below...which we have our inputEl.value = "" ...which will clear the input field
-  inputEl.value = "";
-
-  // 2. Call the renderLeads() function
-  renderLeads();
-
-  // To verify that it works:
-  console.log(localStorage.getItem("myLeads"));
-});
-
-// 1. Wrap the code below in a renderLeads() function
-function renderLeads() {
-  let listItems = "";
-
-  for (let i = 0; i < myLeads.length; i++) {
-    //this adds the items entered into the listItems string and then it's rendered into the dom below
-    listItems += `
-      <li><a target='_blank' href ="${myLeads[i]}">${myLeads[i]}</a></li>`;
-  }
-  ulEl.innerHTML = listItems;
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    render(myLeads)
 }
+
+tabBtn.addEventListener("click", function(){    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+        render(myLeads)
+    })
+})
+
+function render(leads) {
+    let listItems = ""
+    for (let i = 0; i < leads.length; i++) {
+        listItems += `
+            <li>
+                <a target='_blank' href='${leads[i]}'>
+                    ${leads[i]}
+                </a>
+            </li>
+        `
+    }
+    ulEl.innerHTML = listItems
+}
+
+deleteBtn.addEventListener("dblclick", function() {
+    localStorage.clear()
+    myLeads = []
+    render(myLeads)
+})
+
+inputBtn.addEventListener("click", function() {
+    myLeads.push(inputEl.value)
+    inputEl.value = ""
+    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+    render(myLeads)
+})
