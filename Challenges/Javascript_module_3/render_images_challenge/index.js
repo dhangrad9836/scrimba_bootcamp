@@ -8,10 +8,20 @@ const imgContainer = document.getElementById("container");
 //const teamImg = document.getElementById("team-img");
 //console.log(imgContainer);
 
+//before refactored code we are running the innerHTML which is the dom every time the for loop runs
+// function imgRender() {
+//   for (i = 0; i < imgs.length; i++) {
+//     imgContainer.innerHTML += `<img class="team-img" src="${imgs[i]}">`;
+//   }
+// }
+
+//refactored code by adding an empty imgsDOM variable string which we can use to add the three images when the for loop is running and it will add an image to the imgsDOM variable then afterwards we can run the imgContainer.innerHTML which access the DOM rather than running the DOM all the time we just access it once
 function imgRender() {
+  let imgsDOM = "";
   for (i = 0; i < imgs.length; i++) {
-    imgContainer.innerHTML += `<img class="team-img" src="${imgs[i]}">`;
+    imgsDOM += `<img alt="Employee in the company" class="team-img" src="${imgs[i]}">`;
   }
+  imgContainer.innerHTML = imgsDOM;
 }
 
 imgRender();
