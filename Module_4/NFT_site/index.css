@@ -42,8 +42,41 @@ h1 {
   margin: 0px;
   color: whitesmoke;
 }
+
+/* 
+Challenge:
+1. Add CSS so the text in the first section 
+   renders correctly. 
+⚠️ Watch out for the amount of white space 
+   you have between the start of the section 
+   and the h2.
+⚠️ Don't write too much code!
+*/
+
+section h2 {
+  margin-top: 0;
+}
+
 h3 {
   font-size: 20px;
   margin: 0px;
   color: #d0affd;
+}
+/* 
+Challenge:
+1. Create a "section" selector and give it the 
+   same padding as the header.
+2. In index.html, find the image of the purple 
+   sneakers and attach a class to it. 
+3. Make it so this image takes up 100% 
+   of the section width.
+*/
+
+section {
+  padding: 45px 0;
+}
+
+.purple-sneakers {
+  width: 100%;
+  /* border: 1px solid red */
 }
