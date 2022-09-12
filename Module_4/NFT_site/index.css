@@ -32,10 +32,7 @@ still be up right up against the left-hand edge of
 the browser. That is fine for now.   
 */
 
-header {
-  background: #5f29a3;
-  padding: 45px 0;
-}
+/* typography */
 
 h1 {
   font-size: 36px;
@@ -72,11 +69,114 @@ Challenge:
    of the section width.
 */
 
-section {
-  padding: 45px 0;
-}
-
 .purple-sneakers {
   width: 100%;
   /* border: 1px solid red */
+}
+
+/* 
+Challenge:
+1. Set the color of the link in the paragraph.
+2. Make the link color change on hover and 
+   active states.
+3. Search online to find out how you can give 
+   the underline a dotted appearance. 
+*/
+
+/* links */
+
+a {
+  color: #ef5839;
+  text-decoration-style: dotted;
+}
+
+a:hover {
+  color: #d4b33c;
+}
+
+a:active {
+  color: #d4b33c;
+}
+
+/* 
+Challenge:
+1. In index.html, wrap the contents of the
+   header and sections in container divs.
+2. Create a selector and add the properties 
+   needed to fix the content width and align
+   it to the center.
+⚠️ The background colors must stay full 
+   width!
+*/
+
+/* layout */
+
+header {
+  background: #5f29a3;
+  padding: 45px 0;
+}
+
+section {
+  padding: 45px 0;
+}
+.container {
+  width: 620px;
+  /* border: 1px solid greenyellow; */
+  margin: 0 auto;
+}
+
+/* 
+Challenge:
+1. Change the background color of this 
+   section, remembering to make sure 
+   the color covers 100% of the width.
+2. Change the font color for all text in 
+   this section.
+*/
+
+.crypto_man {
+  background: #5f29a3;
+  color: whitesmoke;
+}
+
+/* #crypto_punk, #crypto_styles{
+    width: 290px;
+    margin: 0 8px;
+} */
+
+/* 
+Challenge:
+1. Give the images in section two a class.
+2. Use that class to set the width and 
+   border-radius for the images.
+3. Wrap the two images in a container div 
+   and give it a class.
+4. Create the CSS selector for that class 
+   and use flex-box to layout the images
+   as shown in the slide.
+*/
+
+.img_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crypto_image {
+  width: 300px;
+  border-radius: 4.6px;
+}
+
+/* 
+Challenge:
+1. Center the footer's text horizontally.
+2. Give the text space top and bottom.
+   ⚠️ Don't add margin! Look at sections
+   and header for inspiration. 
+3. Give the text the correct color.
+*/
+
+footer {
+  text-align: center;
+  color: #5f29a3;
+  padding: 54px 0;
 }
