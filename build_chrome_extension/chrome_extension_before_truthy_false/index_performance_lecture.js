@@ -33,6 +33,7 @@ for (i = 0; i < myLeads.length; i++) {
   //ulEl.innerHTML += "<li>" + myLeads[i] + ", " + "</li>";
   //console.log(listItems);
 }
+//place the ulEl.innerHTML outside the for loop so the DOM is not constantly updating
 ulEl.innerHTML += listItems;
 
 //3 Render the listItems inside the unordered list using ulEl.innerHTML

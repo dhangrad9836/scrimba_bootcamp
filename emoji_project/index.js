@@ -87,6 +87,7 @@ shiftBtn.addEventListener("click", function () {
 // }
 
 function render() {
+  //clear old version of array b/f render which is the emojiContainer from the div
   emojiContainer.innerHTML = "";
   for (let i = 0; i < myEmojis.length; i++) {
     // write your code here

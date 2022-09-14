@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+}
+
+h1{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif; 
+    margin: 0px 0px 10px 0px;
+}
+
+h2{
+    margin: 0;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* 
+Challenge:
+1. Add padding of 20px left and right and 15px top 
+   and bottom to the header. 
+*/
+
+header{
+    background-color: #b80000;
+    padding: 15px 20px;
+}
+
+section{
+    padding: 30px 20px;
+    display: flex;
+}
+
+.header-text{
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.selected{
+    text-decoration: underline;
+}
+
+.text-left{
+    padding-right: 20px;
+}
+
+img{
+    width: 250px;
+}
+
+footer{
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+}
+
+
