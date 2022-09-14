@@ -34,9 +34,14 @@ the browser. That is fine for now.
 
 /* typography */
 
+h1,
+h3 {
+  margin: 0px;
+}
+
 h1 {
   font-size: 36px;
-  margin: 0px;
+  /* margin: 0px; */
   color: whitesmoke;
 }
 
@@ -56,7 +61,7 @@ section h2 {
 
 h3 {
   font-size: 20px;
-  margin: 0px;
+  /* margin: 0px; */
   color: #d0affd;
 }
 /* 
@@ -90,13 +95,14 @@ a {
   text-decoration-style: dotted;
 }
 
-a:hover {
-  color: #d4b33c;
-}
-
+a:hover,
 a:active {
   color: #d4b33c;
 }
+
+/* a:active {
+  color: #d4b33c;
+} */
 
 /* 
 Challenge:
@@ -111,12 +117,19 @@ Challenge:
 
 /* layout */
 
-header {
+header,
+.crypto_man {
   background: #5f29a3;
-  padding: 45px 0;
+  /* padding: 45px 0; */
 }
 
-section {
+/* section {
+  padding: 45px 0;
+} */
+
+header,
+section,
+footer {
   padding: 45px 0;
 }
 .container {
@@ -133,9 +146,11 @@ Challenge:
 2. Change the font color for all text in 
    this section.
 */
-
+p {
+  line-height: 23px;
+}
 .crypto_man {
-  background: #5f29a3;
+  /* background: #5f29a3; */
   color: whitesmoke;
 }
 
@@ -178,5 +193,67 @@ Challenge:
 footer {
   text-align: center;
   color: #5f29a3;
-  padding: 54px 0;
+  /* padding: 45px 0; */
+}
+
+/* 
+Challenge:
+1. Style the 4 button-style links as per 
+   the specifications on the slide.
+2. Remember to group the selectors
+   where possible to keep the CSS DRY.
+⚠️ Think: what would make good class
+   names for these links? 
+*/
+
+/* 
+Challenge:
+1. Use the "display" property to make the
+   new links behave more like buttons!
+*/
+
+/* 
+Challenge:
+1. Refactor the CSS for these button-style
+   links using two classes on each link
+   element.
+⚠️ Think what to call the new class you
+   will need to create.
+*/
+
+.btn {
+  display: inline-block;
+  padding: 10px 19px;
+  font-weight: 500px;
+  border-radius: 4.6px;
+  text-decoration: none;
+}
+
+.btn_dark {
+  background: #5f29a3;
+  color: whitesmoke;
+}
+
+/* .btn_dark:hover,
+.btn_mid:hover,
+.btn_light:hover,
+.btn_dark:active,
+.btn_mid:active,
+.btn_light:active {
+  background: #f3e885;
+  color: #2b283a;
+} */
+.btn:hover,
+.btn:active {
+  background: #f3e885;
+  color: #2b283a;
+}
+
+.btn_mid {
+  background: #f0e0ff;
+  color: #5f29a3;
+}
+.btn_light {
+  background: whitesmoke;
+  color: #5f29a3;
 }
