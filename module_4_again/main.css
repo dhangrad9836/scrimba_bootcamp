@@ -1,0 +1,264 @@
+/* semantic html
+Hover & active states with pseudo selectors
+Specificity
+Compound selectors
+inline-block */
+
+/* semantic html: header, section, footer, main */
+
+/* 
+Challenge:
+1. Create a body selector.
+2. Set the base font size and text color to 
+   the values given on the slide.
+3. Bring in "Roboto" from Google Fonts and 
+   set it as the default font. Make sure 
+   browsers will fall back on a sans-serif 
+   font if Roboto is unavailable.
+4. Override HTML's default margin.
+*/
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #2b283a;
+}
+
+/* 
+Challenge:
+1. Create a "header" selector.
+2. Give it its background color.
+3. What CSS property do you need to use to remove
+   the annoying white space at the top? Give this 
+   property a value of 45px top and bottom.
+3. Create selectors for the h1 and h3 elements.
+4. Assign the correct margins, size & colors to h1
+   and h3.
+At the end of the challenge, the h1 and h3 will 
+still be up right up against the left-hand edge of 
+the browser. That is fine for now.   
+*/
+
+header {
+  background: #5f29a3;
+  margin: 0;
+  /* use padding to remove annoying whitespace from top and bottom */
+  /* padding: 45px 0; */
+}
+
+header,
+section,
+footer {
+  padding: 45px 0;
+}
+
+/* p {
+    we can also remove this b/c the default is 16px
+  font-size: 16px;
+} */
+
+/* 
+Challenge:
+1. Create a "section" selector and give it the 
+   same padding as the header.
+2. In index.html, find the image of the purple 
+   sneakers and attach a class to it. 
+3. Make it so this image takes up 100% 
+   of the section width.
+*/
+/* section {
+  padding: 45px 0;
+} */
+
+.center {
+  /* border: 1px solid red; */
+  background: #5f29a3;
+  color: whitesmoke;
+}
+
+.purple-sneakers-img {
+  width: 100%;
+}
+
+/* 
+Challenge:
+1. Add CSS so the text in the first section 
+   renders correctly. 
+⚠️ Watch out for the amount of white space 
+   you have between the start of the section 
+   and the h2.
+⚠️ Don't write too much code!
+*/
+
+/* 
+Challenge:
+1. Set the color of the link in the paragraph.
+2. Make the link color change on hover and 
+   active states.
+3. Search online to find out how you can give 
+   the underline a dotted appearance. 
+*/
+
+/* 
+Challenge:
+1. In index.html, wrap the contents of the
+   header and sections in container divs.
+2. Create a selector and add the properties 
+   needed to fix the content width and align
+   it to the center.
+⚠️ The background colors must stay full 
+   width!
+*/
+
+.container {
+  width: 620px;
+  margin: 0 auto;
+}
+
+/* 
+Challenge:
+1. Center the footer's text horizontally.
+2. Give the text space top and bottom.
+   ⚠️ Don't add margin! Look at sections
+   and header for inspiration. 
+3. Give the text the correct color.
+*/
+
+footer {
+  font-size: 16px;
+  color: #5f29a3;
+  /* padding: 45px 0; */
+  text-align: center;
+}
+
+/* typography */
+h1,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+  color: whitesmoke;
+  /* margin: 0; */
+}
+
+h2 {
+  margin-top: 0;
+  /* we can actually remove this b/c the default size is 16px and 1.5 * 16 = 24px
+    font-size: 24px; */
+}
+
+h3 {
+  font-size: 20px;
+  color: #d0affd;
+  /* margin: 0; */
+}
+
+/* links */
+
+a {
+  color: #ef5839;
+  text-decoration-style: dotted;
+}
+a:hover,
+a:active {
+  color: #d4b44c;
+  text-decoration-style: dotted;
+}
+/* a:active {
+  color: #d4b44c;
+  text-decoration-style: dotted;
+} */
+
+/* 
+Challenge:
+1. Give the images in section two a class.
+2. Use that class to set the width and 
+   border-radius for the images.
+3. Wrap the two images in a container div 
+   and give it a class.
+4. Create the CSS selector for that class 
+   and use flex-box to layout the images
+   as shown in the slide.
+*/
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crypto-info {
+  width: 300px;
+  border-radius: 4.6px;
+}
+
+p {
+  line-height: 23px;
+}
+
+/* 
+Challenge:
+1. Style the 4 button-style links as per 
+   the specifications on the slide.
+2. Remember to group the selectors
+   where possible to keep the CSS DRY.
+⚠️ Think: what would make good class
+   names for these links? 
+*/
+
+.btn {
+  padding: 10px 19px;
+  border-radius: 4.6px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.buy-button {
+  /* padding: 10px 19px; */
+  background: #5f29a3;
+  color: whitesmoke;
+  /* font-weight: 500; */
+  /* border-radius: 4.6px; */
+}
+
+.info-button {
+  /* padding: 10px 19px; */
+  background: #f0e0ff;
+  color: 5f20a3;
+  /* font-weight: 500; */
+  /* border-radius: 4.6px; */
+}
+
+.about-contact {
+  /* padding: 10px 19px; */
+  background: whitesmoke;
+  color: 5f20a3;
+  /* font-weight: 500; */
+  /* border-radius: 4.6px; */
+}
+
+/* shared properties */
+/* .buy-button:active,
+.info-button:active,
+.about-contact:active,
+.buy-button:hover,
+.info-button:hover,
+.about-contact:hover {
+  padding: 10px 19px;
+  background: #f3e855;
+  color: #2b283a;
+  font-weight: 500;
+  border-radius: 4.6px;
+} */
+.btn:active,
+.btn:hover {
+  padding: 10px 19px;
+  background: #f3e855;
+  color: #2b283a;
+  font-weight: 500;
+  border-radius: 4.6px;
+}

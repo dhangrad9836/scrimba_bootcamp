@@ -1,7 +1,9 @@
 const modal = document.getElementById("modal");
 const modalCloseBtn = document.getElementById("modal-close-btn");
+const modalChoiceBtns = document.getElementById("modal-choice-btns");
 const consentForm = document.getElementById("consent-form");
 const modalText = document.getElementById("modal-text");
+const declineBtn = document.getElementById("decline-btn");
 
 /*
 Challenge:
@@ -56,13 +58,29 @@ consentForm.addEventListener("submit", function (e) {
         <div class="idiot-gif">
             <img src="images/pirate.gif">
         </div>`;
+    //this will set the modal close button to true so the user can actually close the page
+    modalCloseBtn.disabled = false;
   }, 3000);
-
   const modalFormData = new FormData(consentForm);
   //console.log(modalFormData);
   const fullName = modalFormData.get("fullName");
-  console.log(fullName);
 }); //end of addEventListener
+
+//eventListener to set the decline button on the hover effect
+declineBtn.addEventListener("mouseenter", function () {
+  //console.log("hovered");
+  modalChoiceBtns.classList.toggle("modal-choice-btns-reverse");
+});
+
+/*   
+Challenge: 
+1. Take control of the div holding the buttons.
+2. In index.css, set up a selector for a new class
+   that uses flex-direction to reverse the order 
+   of its child elements.
+3. Toggle that class on the div holding the buttons 
+   when a user's cursor hovers over the decline button.
+*/
 
 /*
 Challenge:
@@ -120,4 +138,22 @@ Challenge:
 2. Insert the user's name into the HTML string
    that contains the final message we show our
    users.
+*/
+
+/*   
+Challenge: 
+1. Make the button that closes the modal disabled.
+2. Make that button become usable when the final 
+   modal message has been displayed to the user.
+*/
+
+/*   
+Challenge: 
+1. Take control of the decline btn. (What do you
+   need to do to make that possible?)
+2. Set up an eventListener that is triggered 
+   when a user's cursor hovers over the decline 
+   button. (Google the event to listen out for!)
+3. For now, just log out "hovered" when that 
+   happens. 
 */

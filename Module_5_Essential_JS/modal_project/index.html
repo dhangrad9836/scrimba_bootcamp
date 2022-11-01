@@ -1,9 +1,5 @@
 <html>
   <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    />
     <link rel="stylesheet" href="index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
@@ -41,7 +37,7 @@
     </main>
     <div class="modal" id="modal">
       <div class="close-modal-btn-container">
-        <button class="modal-close-btn" id="modal-close-btn" disabled>X</button>
+        <button class="modal-close-btn" id="modal-close-btn">X</button>
       </div>
       <div class="modal-inner" id="modal-inner">
         <h2>We ❤️ Your Data!</h2>
@@ -50,48 +46,24 @@
           track you, and we'll definitely spam you. To use this site, enter your
           name and email address and accept our ridiculous terms and conditions.
         </p>
-
-        <!-- 
-Challenge: 
-1. Create a form using form tags.
-2. Add two inputs: one for name and one 
-   for email address.
-3. Give each input "type", "name" and 
-   "placeholder" properties. You can see the
-   placeholder text we need in the slide. 
--->
-        <form id="consent-form" action="">
+        <form action="">
           <input
             type="text"
-            id="fullName"
-            name="fullName"
+            name="fullNameInput"
+            id="fullNameInput"
             placeholder="Enter your full name"
-            aria-label="Full name"
             required
           />
           <input
             type="text"
-            id="email"
-            name="emailAddress"
+            name="emailInput"
+            id="emailInput"
             placeholder="Enter your email"
-            aria-label="Email address"
             required
           />
-          <div class="modal-choice-btns" id="modal-choice-btns">
-            <!-- 
-Challenge: 
-1. Add two buttons, one for "Accept" and one 
-   for "Decline".
-2. Give the "Accept" button a "type" property 
-   of "submit".
-3. Give each button a class of "modal-btn".
-4. Make sure the form won't submit unless
-   all fields are completed. 
--->
+          <div id="modal-choice-btns" class="modal-choice-btns">
             <button class="modal-btn" type="submit">Accept</button>
-            <button id="decline-btn" class="modal-btn" type="button">
-              Decline
-            </button>
+            <button class="modal-btn">Decline</button>
           </div>
         </form>
       </div>

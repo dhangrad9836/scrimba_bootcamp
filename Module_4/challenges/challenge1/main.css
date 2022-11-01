@@ -1,0 +1,106 @@
+body {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.container {
+  width: 570px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+}
+
+h1 {
+  margin-top: 0px;
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 42px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 20px 0;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+
+p {
+  margin-bottom: 0px;
+}
+.small-heading {
+  font-size: 16px;
+  margin-top: 0px;
+}
+
+.bold-text {
+  display: block;
+  font-weight: 900;
+}
+
+.first-name {
+  font-size: 80px;
+}
+
+.info {
+  font-size: 60px;
+}
+
+a {
+  color: #99d930;
+  font-weight: 900;
+}
+a:hover,
+a:focus {
+  color: #131313;
+}
+
+/* combine header and section */
+header,
+section {
+  padding: 100px 0;
+}
+
+/* header,
+.bottom {
+  background: #252525;
+} */
+
+/* .center {
+  background: #fff;
+  color: #252525;
+} */
+/* 
+this is a utility class you can add this class to any element in html and make it the same color */
+.inverse {
+  background: #252525;
+  color: #fff;
+}
+
+.btn-work {
+  /* we add the display inline block so the padding does not offset our anchor element button */
+  display: inline-block;
+  background: #99d930;
+  color: #252525;
+  border: none;
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-weight: 900;
+  text-decoration: none;
+}
+.btn-work:hover,
+.btn-work:focus {
+  background: #252525;
+  color: #fff;
+}

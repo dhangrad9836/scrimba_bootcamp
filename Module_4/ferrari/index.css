@@ -17,6 +17,15 @@ p{
 
 /* 
 Challenge:
+1. Set the display property of
+   our links to inline-block.
+ */
+ a{
+    
+ }
+
+/* 
+Challenge:
 1. Change the buttons to links.
 2. Style them like buttons so they
    look the same. (you can re-use 
@@ -24,7 +33,7 @@ Challenge:
 ⚠️ This will cause a layout issue!
  */
 
-button{
+/* button{
     padding: 10px 19px;
     border-radius: 4px;
     background-color: #fff200;
@@ -34,6 +43,20 @@ button{
     color: #1d1e22;
     border: none;
     margin-top: 20px
+} */
+
+a{
+    padding: 10px 19px;
+    border-radius: 4px;
+    background-color: #fff200;
+    background-color: gold;
+    font-size: 14px;
+    cursor: pointer;
+    color: #1d1e22;
+    border: none;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .ad-container{

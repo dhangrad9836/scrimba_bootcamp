@@ -76,3 +76,22 @@ the cursor hovers over them.
 .links-container a:hover {
   color: fuchsia;
 }
+
+/* 
+Challenge: 
+1. Look through the html and the new
+compound selectors in the CSS below and 
+figure out what colour the "key 
+requirements" list will be.
+
+⚠️ DO NOT look at the mini browser
+until you have made your guess!
+*/
+
+section .ad-container #req-list ul li {
+    color: green;
+}
+
+body section .ad-container div .general-list li{
+    color: red;
+}

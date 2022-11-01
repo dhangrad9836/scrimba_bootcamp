@@ -1,0 +1,30 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* header {
+  width: 375px;
+  height: 67px;
+} */
+
+.oldagram_logo {
+  width: 127px;
+  height: 63.02px;
+  margin-top: 6px;
+  margin-left: 15px;
+}
+
+.vangogh_avatar {
+  height: 34px;
+  width: 34px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+.avatar_section {
+  display: flex;
+  justify-content: start;
+}

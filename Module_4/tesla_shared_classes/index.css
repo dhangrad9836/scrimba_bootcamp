@@ -39,30 +39,36 @@ Challenge:
    class.
 2. Delete any CSS we no longer need. 
 */
-
-.price-up{
+.price{
     font-weight: bold;
     padding: 5px;
     margin-top: 20px;
     border-radius: 2.6px;
+}
+
+.price-up{
+    /* font-weight: bold;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 2.6px; */
     box-shadow: 0px 0px 3px #4CBB17;
     color: #4CBB17;
 }
 
 .price-down{
-    font-weight: bold;
+    /* font-weight: bold;
     padding: 5px;
     margin-top: 20px;
-    border-radius: 2.6px;
+    border-radius: 2.6px; */
     box-shadow: 0px 0px 3px red;
     color: red;
 }
 
 .price-equal{
-    font-weight: bold;
+    /* font-weight: bold;
     padding: 5px;
     margin-top: 20px;
-    border-radius: 2.6px;
+    border-radius: 2.6px; */
     box-shadow: 0px 0px 3px #999;
     color: #333;
 }
