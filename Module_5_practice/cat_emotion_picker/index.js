@@ -3,6 +3,9 @@ import { catsData } from "/data.js";
 const emotionsRadios = document.getElementById("emotion-radios");
 const getImageBtn = document.getElementById("get-image-btn");
 const gifChecked = document.getElementById("gifs-only-option");
+const memeModal = document.getElementById("meme-modal");
+const memeModalInner = document.getElementById("meme-modal-inner");
+const memeModalCloseBtn = document.getElementById("meme-modal-close-btn");
 
 // function getEmotionsArray(cats){
 //     const emotionsArray = []
@@ -36,8 +39,22 @@ Challenge:
    log out that const.
 */
 
-getImageBtn.addEventListener("click", getMatchingCatsArray);
+//Wire up the modal close button and set modal display to none
+//Note that we didn't use the other addEventListener with function inside because that sets an anonyomous function w/o a name...this way we set our event listener with a name called closeModal but w/o the () parentheses and set a function below with the logic and when the close button is clicked the eventListener fires and the function runs
+memeModalCloseBtn.addEventListener("click", closeModal);
 
+function closeModal() {
+  memeModal.style.display = "none";
+}
+
+//PROGRAM STARTS HERE
+
+//getImageBtn.addEventListener("click", getMatchingCatsArray);
+getImageBtn.addEventListener("click", renderCat);
+
+//purpose to store in checkedRadio variable if user has checked a radio button
+//and in ifGif variable if user has selected the Animated GIFs only checkbox
+//we will use both variables to filter out our catsData array
 function getMatchingCatsArray() {
   /*
 Challenge:
@@ -50,7 +67,7 @@ note: that the line: document.querySelector("input[type='radio']:checked" will t
     const checkedRadio = document.querySelector(
       "input[type='radio']:checked"
     ).value;
-    console.log(checkedRadio);
+    //console.log(checkedRadio);
 
     /*
 Challenge:
@@ -75,10 +92,28 @@ Challenge:
    const?
 */
 
+    //  const catsMatchingData = catsData.filter(function (emotion) {
+    //    return emotion.emotionTags.includes(checkedRadio);
+    //  });
+    //  console.log(catsMatchingData);
+
+    /*
+Challenge:
+1. Change the .filter() method's function so it returns an 
+   array that only has GIFs if the 'GIFs only' option is 
+   checked. If the 'GIFs only' option is not checked, it
+   should return an array of all matches as it does now.
+   Also note that when using the filter method we have to return the data back…here we are returning the catsMatchingData variable;
+*/
+
     const catsMatchingData = catsData.filter(function (emotion) {
-      return emotion.emotionTags.includes(checkedRadio);
+      if (isGif) {
+        return emotion.emotionTags.includes(checkedRadio) && emotion.isGif;
+      } else {
+        return emotion.emotionTags.includes(checkedRadio);
+      }
     });
-    console.log(catsMatchingData);
+    return catsMatchingData;
   } // end if statement
 } //end getMatchingCatsArray
 
@@ -121,6 +156,67 @@ Challenge:
 */
   document.getElementById(e.target.id).parentElement.classList.add("highlight");
 } //end highlightCheckedOptions function
+
+function getSingleCatObject() {
+  const catsArray = getMatchingCatsArray();
+
+  if (catsArray.length === 1) {
+    return catsArray[0];
+  } else {
+    //  console.log(catsArray[Math.floor(Math.random()) * catsArray.length]);
+    const randomNumber = Math.floor(Math.random() * catsArray.length);
+    return catsArray[randomNumber];
+  }
+
+  /*
+Challenge 1:
+1. Inside this function, call getMatchingCatsArray 
+   and save whatever it returns to a const called 
+   “catsArray”. 
+*/
+
+  /*
+Challenge 2:
+1. Set up an if to check if there is only one
+   cat object in the array. If there is, log
+   out that cat object (but not the whole array!)
+   {}...do this by selecting the catsArray [0]
+   Test: "happy", animated GIFS only checked.
+*/
+  /*
+Challenge 3:
+1. If catsArray has more than one object, 
+   select an object at random and log it out.
+   in the else statement
+*/
+} //end getSingleCatObject function
+
+function renderCat() {
+  const catObject = getSingleCatObject();
+  memeModalInner.innerHTML = `<img 
+        class="cat-img" 
+        src="./images/${catObject.image}"
+        alt=${catObject.image}
+        >`;
+  memeModal.style.display = "flex";
+
+  /*
+Challenge:
+1. Take the object that is returned by 
+   getSingleCatObject and save it to a const 
+   called "catObject".
+2. Set memeModalInner’s innerHTML to the HTML 
+   string below, remembering to insert the relevant 
+   data from catObject to replace the UPPERCASE text.
+3. Set memeModal’s display property to "flex". 
+ 
+       `<img 
+        class="cat-img" 
+        src="./images/CAT IMAGE"
+        alt="CAT ALT TEXT"
+        >`
+*/
+} //end renderCat function
 
 function getEmotionsArray(cats) {
   //empty array to hold the cats emotions

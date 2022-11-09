@@ -56,6 +56,7 @@ Challenge:
    the "purchase" class and add the 
    "on-offer" class.
 */
+//note that using getElementsByClassName (which is plural and) return an array which is why we can use it as an array and in the for loop
 clearBtn.addEventListener("click", function () {
   const productsArray = document.getElementsByClassName("product");
   for (let product of productsArray) {
