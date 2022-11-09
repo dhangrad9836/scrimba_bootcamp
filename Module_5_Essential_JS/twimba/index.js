@@ -12,18 +12,8 @@ tweetBtn.addEventListener("click", function () {
 function getFeedHtml() {
   //Job of fuction to iterate through data.js and create HTML from each tweet with the boilerplate code which we will replace using template literals
 
-  let feedHtml = "";
-  for (let feed of tweetsData) {
-    /*
-Challenge:
-1. Use a "for of" to iterate over the data and 
-   create HTML string for each tweet using the 
-   boilerplate below. Replace UPPERCASE text
-   with data from the tweets. 
-2. Store this HTML in a let called "feedHtml".
-3. Log out feedHtml.
-4. Call getFeedHtml to check it's working.
-*/
+  let feedHtml = ``;
+  tweetsData.forEach(function (feed) {
     feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
@@ -46,9 +36,23 @@ Challenge:
     </div>
 </div>
 `;
-  } //END for of function
-  console.log(feedHtml);
+  });
+  /*
+Challenge:
+1. Use a "for of" to iterate over the data and 
+   create HTML string for each tweet using the 
+   boilerplate below. Replace UPPERCASE text
+   with data from the tweets. 
+2. Store this HTML in a let called "feedHtml".
+3. Log out feedHtml.
+4. Call getFeedHtml to check it's working.
+*/
+
+  //END for of function
+
+  //   console.log(feedHtml); we did a test with console now we will just return
+  return feedHtml;
 } //end getFeedHtml function
 
 //STEP 1 pass tweetsData inside getFeedHtml function
-getFeedHtml();
+console.log(getFeedHtml());
