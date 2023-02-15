@@ -1,0 +1,27 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.hero-section {
+  width: 100%;
+  height: 343px;
+  border: 2px solid red;
+  background-image: url(images/torshov.jpg);
+  background-size: auto;
+}
