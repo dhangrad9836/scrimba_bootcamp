@@ -1,5 +1,6 @@
 body {
   margin: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .card {
@@ -8,6 +9,11 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  background: #ddebf8;
+  color: #2b2839;
+  border-bottom: 5px solid #d8cefe;
+
+  text-align: center;
 }
 
 .main-img {
