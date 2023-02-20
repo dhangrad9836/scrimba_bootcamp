@@ -1,0 +1,47 @@
+@font-face {
+  font-family: funnyText;
+  src: url("myFont.ttf");
+}
+
+body {
+  margin: 0;
+  color: #82a5ca;
+  text-align: center;
+  font-family: "Happy Monkey", cursive;
+}
+
+/*
+Challenge:
+1. Center the text and button
+2. Style the button according to the design.
+   Use a class to select the button.
+*/
+
+.hero {
+  background-image: url("images/space.jpg");
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+.cta {
+  border-bottom: 4px solid white;
+}
+
+.apply-btn {
+  padding: 5px 10px;
+  background: white;
+  border: none;
+  font-family: inherit;
+  color: #82a5ca;
+  font-weight: bold;
+  text-shadow: 0px 0px 0px black;
+}
+
+#main-img {
+  width: 150px;
+  margin-top: 20px;
+}
+
+#title {
+  text-shadow: 0px 0px 4px black;
+}
